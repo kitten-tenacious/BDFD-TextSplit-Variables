@@ -105,12 +105,14 @@ The output would be: `I.love.Anime`
 Never forget to use `$joinSplitText` inside `$setVar`. Make sure the joiner inside the argument should be whatever you're splitting the variable with, or it would throw an error later.
 
 For example:
+
 ```markdown
 $textSplit[$getVar[VARIABLE;$authorID];.]
 $editSplitText[1;200]
 $setVar[VARIABLE;$joinSplitText[.];$authorID]
+```
 
-$
+Always remember to use `$joinSplitText` inside $setVar with what you're splitting the avriable with.
 
 
 
@@ -188,3 +190,6 @@ That's it, pretty easy right? The withdraw command will be easy too. Just like t
 ### Withdraw Command
 
 A simple withdraw command would look like this:
+
+```markdown
+$textSplit[$getVar[VARIABLE;$authorID];.]
