@@ -9,8 +9,8 @@ I'm looking forward to see people actually understanding what this Guide is, so 
 ## TextSplit Functions 
 - [$textSplit](#textsplit)
 - [$editSplitText](#editsplittext)
-- $joinSplitText
-- $splitText
+- [$joinSplitText](#joinsplittext)
+- [$splitText](#splittext)
 
 
 
