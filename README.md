@@ -188,6 +188,7 @@ $editSplitText[3;1000]
 $c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
 $setVar[VARIABLE;$joinSplitText[.];$authorID]
 $endif
+$onlyIf[$message<=$splitText[1];Your amount should not exceed how much money you have!]
 $onlyIf[$isNumber[$message]==true;You can only deposit money in numbers.]
 $onlyIf[$message>0;Your amount should be greater than 0.]
 $onlyIf[$splitText[2]<$splitText[3];Your maximum Bank Limit reached. You cannot deposit anymore.]
