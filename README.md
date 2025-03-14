@@ -13,9 +13,9 @@ I'm looking forward to see people actually understanding what this Guide is, so 
 - [$splitText](#splittext)
 
  ## Balance, Deposit & Withdraw
-- [Balance Command](#balancecommand)
-- [Deposit Command](#depositcommand)
-- [Withdraw Command](#withdrawcommand)
+- [Balance Command](#balance-command)
+- [Deposit Command](#deposit-command)
+- [Withdraw Command](#withdraw-command)
 
 
 
