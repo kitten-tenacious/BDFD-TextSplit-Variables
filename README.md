@@ -12,6 +12,11 @@ I'm looking forward to see people actually understanding what this Guide is, so 
 - [$joinSplitText](#joinsplittext)
 - [$splitText](#splittext)
 
+ ## Balance, Deposit & Withdraw
+- [Balance Command](#balancecommand)
+- [Deposit Command](#depositcommand)
+- [Withdraw Command](#withdrawcommand)
+
 
 
 ### $textSplit
@@ -125,3 +130,27 @@ Bank: 0`
 
 Now that we've learned some functions of $textSplit and it's relatives, let's now try making the commands using these.
 
+### Balance Command
+
+This is how a simple Balance code would look like:
+
+```markdown
+$textSplit[$getVar[VARIABLE;$mentioned[1;yes]];.]
+Balance: $numberSeparator[$splitText[1]]
+Bank: $numberSeparator[$splitText[2]]/$numberSeparator[$splitText[3]]
+```
+
+This command shows how much balance and Bank balance you have, along with Bank Capacity.
+
+Always remember to use:
+
+```markdown
+$textSplit[$getVar[VARIABLE;$authorID];.]
+```
+
+At the top of your code wherever you use TextSplit Variables, so the bot understands what variable to be split and to be retrieved.
+
+
+### Deposit Command
+
+Since I've made Deposit command with Bank Limit, I will add some $if to prevent bugs/errors to take place.
