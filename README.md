@@ -153,4 +153,4 @@ At the top of your code wherever you use TextSplit Variables, so the bot underst
 
 ### Deposit Command
 
-Since I've made Deposit command with Bank Limit, I will add some $if to prevent bugs/errors to take place.
+Now let's see how we can make a Deposit command with TextSplit Usage.
