@@ -24,7 +24,7 @@ $textSplit[$getVar[VARIABLE;$authorID];.]
 
 Since the variable we're using will have multiple variables stored, this is how the default value should look:
 
-![Click Me](https://cdn.discordapp.com/attachments/1349759042058326081/1349958704140652656/IMG_20250314_094112.jpg?ex=67d4fe84&is=67d3ad04&hm=0934c1b852984f6e17c176bc0c94a1477b7abaf5f6c2eb4ffdf82ccf1cae2aba&)
+![Click Me](https://cdn.discordapp.com/attachments/1349964745519665273/1349964786217259048/IMG_20250314_094112.jpg?ex=67d5042e&is=67d3b2ae&hm=a9a67c1e2e2b10f325f442ea4294ca80e308b3be67c5f770be763724c15c1600&)
 
 
 This is how the value should look like, with each variables getting split by `.`
