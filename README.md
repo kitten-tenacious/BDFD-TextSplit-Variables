@@ -108,7 +108,7 @@ For example:
 
 ```markdown
 $textSplit[$getVar[VARIABLE;$authorID];.]
-$editSplitText[1;200]
+$editSplitText[1;200] $c[setting value for "money" as 200.]
 $setVar[VARIABLE;$joinSplitText[.];$authorID]
 ```
 
