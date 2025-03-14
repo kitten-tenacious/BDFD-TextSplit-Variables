@@ -153,11 +153,17 @@ This is how a simple Balance code would look like:
 
 ```markdown
 $textSplit[$getVar[VARIABLE;$mentioned[1;yes]];.]
+$if[$splitText[3]==0]
+$editSplitText[3;1000]
+$c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
+$endif
 Balance: $$numberSeparator[$splitText[1]]
 Bank: $$numberSeparator[$splitText[2]]/$$numberSeparator[$splitText[3]]
 ```
 
 This command shows how much balance and Bank balance you have, along with Bank Capacity.
+I also set if so that the current value of maximum bank limit is 0, it will be set to 1000 (you can change this value, or set in manually through the app and remove that part of the code).
+
 
 Always remember to use:
 
@@ -176,6 +182,10 @@ Now let's see how we can make a Deposit command with TextSplit Usage. For this, 
 ```markdown
 $nomention
 $textSplit[$getVar[VARIABLE;$authorID];.]
+$if[$splitText[3]==0]
+$editSplitText[3;1000]
+$c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
+$endif
 $onlyIf[$isNumber[$message]==true;You can only deposit money in numbers.]
 $onlyIf[$message>0;Your amount should be greater than 0.]
 $onlyIf[$splitText[2]<$splitText[3];Your maximum Bank Limit reached. You cannot deposit anymore.]
@@ -200,3 +210,8 @@ A simple withdraw command would look like this:
 
 ```markdown
 $textSplit[$getVar[VARIABLE;$authorID];.]
+$if[$splitText[3]==0]
+$editSplitText[3;1000]
+$c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
+$endif
+```
