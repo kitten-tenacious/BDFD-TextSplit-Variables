@@ -102,6 +102,17 @@ $joinSplitText[.]
 
 The output would be: `I.love.Anime`
 
+Never forget to use `$joinSplitText` inside `$setVar`. Make sure the joiner inside the argument should be whatever you're splitting the variable with, or it would throw an error later.
+
+For example:
+```markdown
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[1;200]
+$setVar[VARIABLE;$joinSplitText[.];$authorID]
+
+$
+
+
 
 ### $splitText
 
@@ -153,4 +164,27 @@ At the top of your code wherever you use TextSplit Variables, so the bot underst
 
 ### Deposit Command
 
-Now let's see how we can make a Deposit command with TextSplit Usage.
+Now let's see how we can make a Deposit command with TextSplit Usage. For this, start off with `$textSplit`:
+
+```markdown
+$nomention
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$onlyIf[$isNumber[$message]==true;You can only deposit money in numbers.]
+$onlyIf[$message>0;Your amount should be greater than 0.]
+$onlyIf[$splitText[2]<$splitText[3];Your maximum Bank Limit reached. You cannot deposit anymore.]
+$onlyIf[$splitText[2]!=$splitText[3];Your maximum Bank Limit reached. You cannot deposit anymore.]
+$onlyIf[$splitText[1]>0;You don't have any money in balance to deposit.]
+$reply
+$allowUserMentions[]
+$username, you deposited **$message** into the bank.
+$editSplitText[2;$sum[$splitText[2];$message]]
+$editSplitText[1;$sub[$splitText[1];$message]]
+$setvar[VARIABLE;$joinSplitText[.];$authorID]
+$c[always remember to use $joinSplitText after setting values.]
+```
+
+That's it, pretty easy right? The withdraw command will be easy too. Just like this, vice versa and not much limiters related to bank limit, since we're not gonna need that for withdrawing.
+
+### Withdraw Command
+
+A simple withdraw command would look like this:
