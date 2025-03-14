@@ -156,6 +156,7 @@ $textSplit[$getVar[VARIABLE;$mentioned[1;yes]];.]
 $if[$splitText[3]==0]
 $editSplitText[3;1000]
 $c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
+$setVar[VARIABLE;$joinSplitText[.];$authorID]
 $endif
 Balance: $$numberSeparator[$splitText[1]]
 Bank: $$numberSeparator[$splitText[2]]/$$numberSeparator[$splitText[3]]
@@ -185,6 +186,7 @@ $textSplit[$getVar[VARIABLE;$authorID];.]
 $if[$splitText[3]==0]
 $editSplitText[3;1000]
 $c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
+$setVar[VARIABLE;$joinSplitText[.];$authorID]
 $endif
 $onlyIf[$isNumber[$message]==true;You can only deposit money in numbers.]
 $onlyIf[$message>0;Your amount should be greater than 0.]
@@ -213,5 +215,6 @@ $textSplit[$getVar[VARIABLE;$authorID];.]
 $if[$splitText[3]==0]
 $editSplitText[3;1000]
 $c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
+$setVar[VARIABLE;$joinSplitText[.];$authorID]
 $endif
 ```
