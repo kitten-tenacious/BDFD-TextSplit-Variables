@@ -17,7 +17,7 @@ I'm looking forward to see people actually understanding what this Guide is, so 
 - [Deposit Command](#deposit-command)
 - [Withdraw Command](#withdraw-command)
 
-
+---
 
 ### $textSplit
 
