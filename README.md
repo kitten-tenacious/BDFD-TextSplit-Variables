@@ -196,7 +196,7 @@ $allowUserMentions[]
 $username, you deposited **$message** into the bank.
 $editSplitText[2;$sum[$splitText[2];$message]]
 $editSplitText[1;$sub[$splitText[1];$message]]
-$setvar[VARIABLE;$joinSplitText[.];$authorID]
+$setVar[VARIABLE;$joinSplitText[.];$authorID]
 $c[always remember to use joinSplitText after setting values.]
 ```
 
