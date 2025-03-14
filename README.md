@@ -10,3 +10,77 @@ I'm looking forward to see people actually understanding what this Guide is, so 
 - $textSplit
 - $editSplitText
 - $joinSplitText
+
+
+### $textSplit
+
+This is the very beginning of using a Textsplit variable.
+For this, first of all you have to use the $textSplit function to split the values of a variable.
+You'll have to make a variable named anything preferable to you. This will be the variable we'll use to make multiple variables. This is how the function would look like, when splitting the values inside the variable:
+
+```markdown
+$textSplit[$getVar[VARIABLE;$authorID];.]
+```
+
+Since the variable we're using will have multiple variables stored, this is how the default value should look:
+
+![Click Me](https://cdn.discordapp.com/attachments/1349759042058326081/1349958704140652656/IMG_20250314_094112.jpg?ex=67d4fe84&is=67d3ad04&hm=0934c1b852984f6e17c176bc0c94a1477b7abaf5f6c2eb4ffdf82ccf1cae2aba&)
+
+
+This is how the value should look like, with each variables getting split by `.`
+
+Each 0 represent each variable, so let's just memorize what each variable is.
+
+- The first two zeroes are "money" and "bank".
+- The next two zeroes are "bank limit" and "xp" (xp of user).
+- The rest of the zeroes are "req-exp" (required exp) and "level" (current level).
+
+
+So now we have made 6 variables, we can now modify the values, and use it acocordingly.
+If you ever want to add more variables, just add `.` (the splitter to split the values) and then add values for each variable. Remember to keep an eye on the values because since we're using Global variables, the maximum limit is 499 characters.
+
+
+
+### $editSplitText
+
+This is how we modify each values once a variable is split using $textSplit. This is how the function is used:
+
+```markdown
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[Index;Value]
+```
+
+This function has 2 arguments, with first being "Index" and the second being "Value". 
+
+#### Index
+
+An index of a variable is easy to learn. Suppose you have to edit the value of "money" variable, stored inside the main variable.
+
+Since the first 0 is "money", we're going to use:
+
+```markdown
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[1;1000]
+```
+
+This sets the value of the "money" variable to "1000". So now we have the "money" variable with value "1000".
+An **Index** is a number that tells you which part of a split you want to use/modify.
+Since "money" is 1, "bank" is 2, "bank-limit" is 3 and so on, each split has a number.
+
+
+
+#### Value
+
+The **Value** of an index is the text you want to replace with.
+The example for this can be seen above this section.
+
+
+
+### $joinSplitText
+
+$joinSplitText joins the split text with whatever you specify inside the value. Usage:
+
+```markdown
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[1;1000]
+$joinSplitText[.]```
