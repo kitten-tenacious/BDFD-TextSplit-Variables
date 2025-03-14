@@ -190,7 +190,7 @@ $setvar[VARIABLE;$joinSplitText[.];$authorID]
 $c[always remember to use $joinSplitText after setting values.]
 ```
 
-That's it, pretty easy right? The withdraw command will be easy too. Just like this, vice versa and not much limiters related to bank limit, since we're not gonna need that for withdrawing.
+That's it, pretty easy right? The withdraw command is easy too. Just like this, vice versa and not much limiters related to bank limit, since we're not gonna need that for withdrawing.
 
 ---
 
