@@ -10,6 +10,8 @@ I'm looking forward to see people actually understanding what this Guide is, so 
 - $textSplit
 - $editSplitText
 - $joinSplitText
+- $splitText
+
 
 
 ### $textSplit
@@ -83,4 +85,43 @@ $joinSplitText joins the split text with whatever you specify inside the value. 
 ```markdown
 $textSplit[$getVar[VARIABLE;$authorID];.]
 $editSplitText[1;1000]
-$joinSplitText[.]```
+$joinSplitText[.]
+```
+
+For example, if I use:
+
+```markdown
+$textSplit[I-love-Anime;-]
+$joinSplitText[.]
+```
+
+The output would be: `I.love.Anime`
+
+
+### $splitText
+
+$splitText returns the value of the Index set inside the arguments. For example:
+
+```markdown
+$textSplit[I-Love-Anime;-]
+$splitText[2]
+```
+
+It would return: `Love`.
+This will be pretty useful when using TextSplit Variables and to return values of a specific Index.
+Now let's try retrieveing the Value of our variable we created before:
+
+```markdown
+$textSplit[$getVar[VARIABLE;$authorID];.]
+Money: $splitText[1]
+Bank: $splitText[2]
+```
+
+The output would be:
+
+`Money: 1000
+Bank: 0`
+
+
+Now that we've learned some functions of $textSplit and it's relatives, let's now try making the commands using these.
+
