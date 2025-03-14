@@ -6,11 +6,11 @@ This guide will teach how you can store multiple variables inside a single varia
 In this guide we'll learn to setup some basic economy commands along with other useful commands a normal bot would have (levelling up, shop, balance, deposit and withdraw + bank limit).
 I'm looking forward to see people actually understanding what this Guide is, so I will do my best to explain how everything based on "TextSplit" Variables works.
 
-## TextSplit Functions 
-- [$textSplit](#textsplit)
-- [$editSplitText](#editsplittext)
-- [$joinSplitText](#joinsplittext)
-- [$splitText](#splittext)
+## TextSplit Functions
+> [$textSplit](#textsplit)
+> [$editSplitText](#editsplittext)
+> [$joinSplitText](#joinsplittext)
+> [$splitText](#splittext)
 
 
 
