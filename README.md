@@ -43,7 +43,7 @@ Each 0 represent each variable, so let's just memorize what each variable is.
 - The rest of the zeroes are "req-exp" (required exp) and "level" (current level).
 
 
-So now we have made 6 variables, we can now modify the values, and use it acocordingly.
+So now we have made 6 variables, we can now modify the values, and use it accordingly.
 If you ever want to add more variables, just add `.` (the splitter to split the values) and then add values for each variable. Remember to keep an eye on the values because since we're using Global variables, the maximum limit is 499 characters.
 
 
