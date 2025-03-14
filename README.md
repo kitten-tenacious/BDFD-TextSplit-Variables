@@ -46,7 +46,7 @@ Each 0 represent each variable, so let's just memorize what each variable is.
 So now we have made 6 variables, we can now modify the values, and use it accordingly.
 If you ever want to add more variables, just add `.` (the splitter to split the values) and then add values for each variable. Remember to keep an eye on the values because since we're using Global variables, the maximum limit is 499 characters.
 
-
+---
 
 ### $editSplitText
 
@@ -58,6 +58,8 @@ $editSplitText[Index;Value]
 ```
 
 This function has 2 arguments, with first being "Index" and the second being "Value". 
+
+---
 
 #### Index
 
@@ -74,14 +76,14 @@ This sets the value of the "money" variable to "1000". So now we have the "money
 An **Index** is a number that tells you which part of a split you want to use/modify.
 Since "money" is 1, "bank" is 2, "bank-limit" is 3 and so on, each split has a number.
 
-
+---
 
 #### Value
 
 The **Value** of an index is the text you want to replace with.
 The example for this can be seen above this section.
 
-
+---
 
 ### $joinSplitText
 
@@ -114,7 +116,7 @@ $setVar[VARIABLE;$joinSplitText[.];$authorID]
 
 Always remember to use `$joinSplitText` inside $setVar with what you're splitting the variable with.
 
-
+---
 
 ### $splitText
 
@@ -143,6 +145,8 @@ Bank: 0`
 
 Now that we've learned some functions of $textSplit and it's relatives, let's now try making the commands using these.
 
+---
+
 ### Balance Command
 
 This is how a simple Balance code would look like:
@@ -163,6 +167,7 @@ $textSplit[$getVar[VARIABLE;$authorID];.]
 
 At the top of your code wherever you use TextSplit Variables, so the bot understands what variable to be split and to be retrieved.
 
+---
 
 ### Deposit Command
 
@@ -186,6 +191,8 @@ $c[always remember to use $joinSplitText after setting values.]
 ```
 
 That's it, pretty easy right? The withdraw command will be easy too. Just like this, vice versa and not much limiters related to bank limit, since we're not gonna need that for withdrawing.
+
+---
 
 ### Withdraw Command
 
