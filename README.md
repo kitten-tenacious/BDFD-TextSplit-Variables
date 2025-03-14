@@ -102,7 +102,7 @@ $textSplit[I-love-Anime;-]
 $joinSplitText[.]
 ```
 
-The output would be: `I.love.Anime`
+The output is: `I.love.Anime`
 
 Never forget to use `$joinSplitText` inside `$setVar`. Make sure the joiner inside the argument should be whatever you're splitting the variable with, or it would throw an error later.
 
@@ -127,7 +127,7 @@ $textSplit[I-Love-Anime;-]
 $splitText[2]
 ```
 
-It would return: `Love`.
+It will return: `Love`.
 This will be pretty useful when using TextSplit Variables and to return values of a specific Index.
 Now let's try retrieveing the Value of our variable we created before:
 
@@ -137,7 +137,7 @@ Money: $splitText[1]
 Bank: $splitText[2]
 ```
 
-The output would be:
+The output will be:
 
 `Money: 1000
 Bank: 0`
