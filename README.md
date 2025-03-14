@@ -112,7 +112,7 @@ $editSplitText[1;200] $c[setting value for "money" as 200.]
 $setVar[VARIABLE;$joinSplitText[.];$authorID]
 ```
 
-Always remember to use `$joinSplitText` inside $setVar with what you're splitting the avriable with.
+Always remember to use `$joinSplitText` inside $setVar with what you're splitting the variable with.
 
 
 
