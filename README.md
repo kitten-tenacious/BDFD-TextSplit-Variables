@@ -59,7 +59,7 @@ $editSplitText[Index;Value]
 
 This function has 2 arguments, with first being "Index" and the second being "Value". 
 
----
+#
 
 #### Index
 
@@ -76,7 +76,7 @@ This sets the value of the "money" variable to "1000". So now we have the "money
 An **Index** is a number that tells you which part of a split you want to use/modify.
 Since "money" is 1, "bank" is 2, "bank-limit" is 3 and so on, each split has a number.
 
----
+#
 
 #### Value
 
