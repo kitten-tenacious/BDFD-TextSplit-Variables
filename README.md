@@ -7,10 +7,10 @@ In this guide we'll learn to setup some basic economy commands along with other 
 I'm looking forward to see people actually understanding what this Guide is, so I will do my best to explain how everything based on "TextSplit" Variables works.
 
 ## TextSplit Functions
-> [$textSplit](#textsplit)
-> [$editSplitText](#editsplittext)
-> [$joinSplitText](#joinsplittext)
-> [$splitText](#splittext)
+- [$textSplit](#textsplit)
+- [$editSplitText](#editsplittext)
+- [$joinSplitText](#joinsplittext)
+- [$splitText](#splittext)
 
 
 
