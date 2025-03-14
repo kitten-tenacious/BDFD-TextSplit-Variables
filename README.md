@@ -194,6 +194,7 @@ $onlyIf[$message>0;Your amount should be greater than 0.]
 $onlyIf[$splitText[2]<$splitText[3];Your maximum Bank Limit reached. You cannot deposit anymore.]
 $onlyIf[$splitText[2]!=$splitText[3];Your maximum Bank Limit reached. You cannot deposit anymore.]
 $onlyIf[$splitText[1]>0;You don't have any money in balance to deposit.]
+$onlyIf[$message<=$splitText[3];You cannot exceed your bank limit.]
 $reply
 $allowUserMentions[]
 $username, you deposited **$message** into the bank.
