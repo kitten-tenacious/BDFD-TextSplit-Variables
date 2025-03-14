@@ -153,8 +153,8 @@ This is how a simple Balance code would look like:
 
 ```markdown
 $textSplit[$getVar[VARIABLE;$mentioned[1;yes]];.]
-Balance: $numberSeparator[$splitText[1]]
-Bank: $numberSeparator[$splitText[2]]/$numberSeparator[$splitText[3]]
+Balance: $$numberSeparator[$splitText[1]]
+Bank: $$numberSeparator[$splitText[2]]/$$numberSeparator[$splitText[3]]
 ```
 
 This command shows how much balance and Bank balance you have, along with Bank Capacity.
@@ -187,7 +187,7 @@ $username, you deposited **$message** into the bank.
 $editSplitText[2;$sum[$splitText[2];$message]]
 $editSplitText[1;$sub[$splitText[1];$message]]
 $setvar[VARIABLE;$joinSplitText[.];$authorID]
-$c[always remember to use $joinSplitText after setting values.]
+$c[always remember to use joinSplitText after setting values.]
 ```
 
 That's it, pretty easy right? The withdraw command is easy too. Just like this, vice versa and not much limiters related to bank limit, since we're not gonna need that for withdrawing.
