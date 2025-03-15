@@ -271,8 +271,11 @@ $endif
 
 That's it, it was this simple. If you don't want to always copy paste the "bank limit" and Level checker everytime when making a new command, you can defaultely set the values to whatever you want in the app, so you don't want to get annoyed, like this:
 
+#
+
 ![Click Me](https://cdn.discordapp.com/attachments/1349964745519665273/1350397269949808650/IMG_20250315_144614.jpg?ex=67d696f6&is=67d54576&hm=e468e2e318a52fbafedab398b188eec78b4cbab74fd098de0e637f361175dbfa&)
 
+#
 
 In this image, I've set default values of Bank Limit to 1000, Required EXP to 100 and Level to 1, so I don't want to copy paste the code to manually check it.
 
