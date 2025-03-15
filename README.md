@@ -299,3 +299,37 @@ For this, we have to make a seperate variable for adding the following items:
 
 These are some example items that I'm going to add in the shop, you can customize or rename these items to what you want. This is just for an example as this is a Guide. So now, I'm going to create a new variable named "ITEMS" with the Value set the following:
 
+![Click Here](https://cdn.discordapp.com/attachments/1349964745519665273/1350402981694144542/IMG_20250315_150813.jpg?ex=67d69c48&is=67d54ac8&hm=f851f3a6832e8caafaa3805c5c5e0bee7d52fd987038425d9e5d88d9d4b45ca7&)
+
+
+There are 5 variables, with them being seperated again with `.`
+Since there are 5 fruits that are being added in the shop, 5 variables with each having a seperator as `.` between them.
+
+TO REMEMBER:
+
+**DO NOT** add the seperator at the beginning of the Variable Value (Before the first variable) and at the end of the variable (After the last variable).
+
+This is how the code looks like, with adding basic embed examples:
+
+```markdown
+$nomention
+$reply
+$allowUserMentions[]
+$title[Shop]
+$description[
+
+Mango: $30
+Apple - $50
+Banana - $60
+Orange - $90
+Watermelon - $120]
+$footer[$username]
+$addTimestamp
+$color[00ff00] $c[adding color for a clean shop]
+```
+
+There. Since it's a pretty visual code and there's nothing to be done in it, there's only a title, description, color and a timestamp put in the code, not too much detail. You can make the shop command anyway you like.
+
+---
+
+### Buy Command
