@@ -214,10 +214,23 @@ That's it, pretty easy right? The withdraw command is easy too. Just like this, 
 A simple withdraw command would look like this:
 
 ```markdown
+$nomention
 $textSplit[$getVar[VARIABLE;$authorID];.]
 $if[$splitText[3]==0]
 $editSplitText[3;1000]
 $c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
 $setVar[VARIABLE;$joinSplitText[.];$authorID]
 $endif
+$onlyIf[$splitText[2]>0;You don't have any money in the bank to withdraw.]
+$onlyIf[$message<=$splitText[2];You cannot withdraw more than you have in the bank.]
+$onlyIf[$message>0;Your amount should be greater than 0.]
+$onlyIf[$isNumber[$message]==true;Your amount should be in numbers.]
+$username, you withdrawn **$$message** from the bank.
+
+$editSplitText[1;$calculate[$splitText[1]+$message]]
+$editSplitText[2;$calculate[$splitText[2]-$message]]
+$setVar[VARIABLE;$joinSplitText[.];$authorID]
 ```
+
+Just that's it, now you have a working withdraw, deposit and balance command with bank limit all in a single variable!
+Now, let's learn how we can make Levelling System with the rest of the variables we made before.
