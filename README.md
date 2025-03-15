@@ -3,7 +3,7 @@
 This guide will teach how you can store multiple variables inside a single variable, with the use of some functions. This way you can exceed the amount of maximum amount of variables by storing much information inside a variable.
 
 
-In this guide we'll learn to setup some basic economy commands along with other useful commands a normal bot would have (levelling up, shop, balance, deposit and withdraw + bank limit).
+In this guide we'll learn to setup some basic economy commands along with other useful commands a normal bot would have (levelling up, shop with buy, balance, deposit and withdraw + bank limit).
 I'm looking forward to see people actually understanding what this Guide is, so I will do my best to explain how everything based on "TextSplit" Variables works.
 
  ## TextSplit Functions
@@ -246,6 +246,9 @@ Now let's see how we can make a Level Up checker, that checks if the user has re
 
 ### Level Up Checker
 
+This checks if the User has exceeded the amount of "Required XP" variable, and if they did, they are advanced to the next level.
+
+
 ```markdown
 $nomention
 $textSplit[$getVar[VARIABLE;$authorID];.]
@@ -277,10 +280,22 @@ That's it, it was this simple. If you don't want to always copy paste the "bank 
 
 #
 
+
 In this image, I've set default values of Bank Limit to 1000, Required EXP to 100 and Level to 1, so I don't want to copy paste the code to manually check it.
 
 That's it, now let's focus on the final command: **Shop Command**.
 
 ---
 
-Ok.
+### Shop Command
+
+For this, we have to make a seperate variable for adding the following items:
+
+- Apple
+- Banana
+- Watermelon
+- Orange
+- Mango
+
+These are some example items that I'm going to add in the shop, you can customize or rename these items to what you want. This is just for an example as this is a Guide. So now, I'm going to create a new variable named "ITEMS" with the Value set the following:
+
