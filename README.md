@@ -20,6 +20,10 @@ I'm looking forward to see people actually understanding what this Guide is, so 
  ## Levelling System
 - [XP & Level Checker](#level-up-checker)
 
+ ## Shop & Buy Commands
+- [Shop Command](#shop-command)
+- [Buy Command](#buy-command)
+
 ---
 
 ### $textSplit
@@ -338,3 +342,73 @@ There. Since it's a pretty visual code and there's nothing to be done in it, the
 ### Buy Command
 
 This is a basic buy command that checks if the item exists in the shop, and if not then it returns an output message.
+
+```markdown
+$nomention
+$reply
+$allowUserMentions[]
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$var[money;$splitText[1]]
+$onlyIf[$message!=;What do you want to buy from the Shop?]
+$if[$toLowercase[$message]==mango]
+$onlyIf[$var[money]>=30;You need $30 to buy a Mango.] $c[checking if the user has money.]
+$username, you bought a **Mango** for **$30**.
+$textSplit[$getVar[ITEMS;$authorID];.]
+$editSplitText[1;$sum[$splitText[1];1]] $c[Increases 1 per each purchase.]
+$setVar[ITEMS;$joinSplitText[.];$authorID] $c[saving it]
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[1;$sub[$splitText[1];30]] $c[Removing $30 from User's balance.]
+$setVar[VARIABLE;$joinSplitText[.];$authorID] $c[saving the variable.]
+
+$elseif[$toLowercase[$message]==apple]
+$onlyIf[$var[money]>=50;You need $50 to buy an Apple.] $c[checking if the user has money.]
+$username, you bought an **Apple** for **$50**.
+$textSplit[$getVar[ITEMS;$authorID];.]
+$editSplitText[2;$sum[$splitText[2];1]] $c[Increases 1 per each purchase.]
+$setVar[ITEMS;$joinSplitText[.];$authorID] $c[saving it]
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[1;$sub[$splitText[1];50]] $c[Removing $50 from User's balance.]
+$setVar[VARIABLE;$joinSplitText[.];$authorID] $c[saving the variable.]
+
+$elseif[$toLowercase[$message]==banana]
+$onlyIf[$var[money]>=60;You need $60 to buy a Banana.] $c[checking if the user has money.]
+$username, you bought a **Banana** for **$60**.
+$textSplit[$getVar[ITEMS;$authorID];.]
+$editSplitText[3;$sum[$splitText[3];1]] $c[Increases 1 per each purchase.]
+$setVar[ITEMS;$joinSplitText[.];$authorID] $c[saving it]
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[1;$sub[$splitText[1];60]] $c[Removing $60 from User's balance.]
+$setVar[VARIABLE;$joinSplitText[.];$authorID] $c[saving the variable.]
+
+$elseif[$toLowercase[$message]==orange]
+$onlyIf[$var[money]>=90;You need $90 to buy an Orange.] $c[checking if the user has money.]
+$username, you bought an **Orange** for **$90**.
+$textSplit[$getVar[ITEMS;$authorID];.]
+$editSplitText[4;$sum[$splitText[4];1]] $c[Increases 1 per each purchase.]
+$setVar[ITEMS;$joinSplitText[.];$authorID] $c[saving it]
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[1;$sub[$splitText[1];90]] $c[Removing $90 from User's balance.]
+$setVar[VARIABLE;$joinSplitText[.];$authorID] $c[saving the variable.]
+
+$elseif[$toLowercase[$message]==watermelon]
+$onlyIf[$var[money]>=120;You need $120 to buy a Watermelon.] $c[checking if the user has money.]
+$username, you bought a **Watermelon** for **$120**.
+$textSplit[$getVar[ITEMS;$authorID];.]
+$editSplitText[5;$sum[$splitText[5];1]] $c[Increases 1 per each purchase.]
+$setVar[ITEMS;$joinSplitText[.];$authorID] $c[saving it]
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$editSplitText[1;$sub[$splitText[1];120]] $c[Removing $120 from User's balance.]
+$setVar[VARIABLE;$joinSplitText[.];$authorID] $c[saving the variable.]
+
+$else
+Couldn't find the item you're looking for.
+$endif
+```
+
+This is a basic buy command with the existing items I added in my shop command. You can replace my Items with your Items and Price, since the Shop and Buy Command are pretty self explanatory. If you ever felt like making an advance Server Shop Setup that the Shop can be customized for each server, I had posted a wiki in the Official BDFD Server. You can integrate those codes with this to make this more better.
+
+---
+
+I guess that's it, thank you for following the whole Guide, and those who read the whole Guide until here, you're a real one. Whole Guide done by: `kitten_tenacious`
+
+If you ever face any error, please DM me or create a forum in Support then ping me. I hope you understand this Guide, because this can be a pretty save for your variables.
