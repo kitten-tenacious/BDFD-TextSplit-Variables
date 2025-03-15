@@ -191,19 +191,18 @@ $editSplitText[3;1000]
 $c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
 $setVar[VARIABLE;$joinSplitText[.];$authorID]
 $endif
-
-$onlyIf[$message!=;Include how much do you want to deposit.]
-$onlyIf[$sum[$splitText[2];$message]<=$splitText[3];You cannot exceed the bank limit.]
-$onlyIf[$message<=$splitText[1];Your amount should not exceed how much money you have!]
 $onlyIf[$isNumber[$message]==true;You can only deposit money in numbers.]
+$onlyIf[$message!=;Include how much do you want to deposit.]
+$onlyIf[$message<=$splitText[1];Your amount should not exceed how much money you have!]
 $onlyIf[$message>0;Your amount should be greater than 0.]
 $onlyIf[$splitText[2]<$splitText[3];Your maximum Bank Limit reached. You cannot deposit anymore.]
 $onlyIf[$splitText[2]!=$splitText[3];Your maximum Bank Limit reached. You cannot deposit anymore.]
 $onlyIf[$splitText[1]>0;You don't have any money in balance to deposit.]
 $onlyIf[$message<=$splitText[3];You cannot exceed your bank limit.]
+$onlyIf[$sum[$splitText[2];$message]<=$splitText[3];You cannot exceed the bank limit.]
 $reply
 $allowUserMentions[]
-$username, you deposited **$message** into the bank.
+$username, you deposited **$$message** into the bank.
 $editSplitText[2;$sum[$splitText[2];$message]]
 $editSplitText[1;$sub[$splitText[1];$message]]
 $setVar[VARIABLE;$joinSplitText[.];$authorID]
