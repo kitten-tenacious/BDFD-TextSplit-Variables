@@ -234,3 +234,47 @@ $setVar[VARIABLE;$joinSplitText[.];$authorID]
 
 Just that's it, now you have a working withdraw, deposit and balance command with bank limit all in a single variable!
 Now, let's learn how we can make Levelling System with the rest of the variables we made before.
+
+
+---
+
+Now let's see how we can make a Level Up checker, that checks if the user has reached X amount of exp, so that the user will advance to the next level, using the variables made inside the main variable.
+
+
+### Level Up Checker
+
+```markdown
+$nomention
+$textSplit[$getVar[VARIABLE;$authorID];.]
+$if[$splitText[6]==0] $c[Since the default value is set 0, let's check if it's 0, the level is set to 1, and Required EXP is set to the amount you want. For me, I'm setting "100" as the Level 1 required EXP.]
+$editSplitText[6;1]
+$editSplitText[5;100] $c[required EXP set to 100 now.]
+$setVar[VARIABLE;$joinSplitText[.];$authorID] $c[saving the variable]
+$endif
+$c[I'm also going to copy paste the "bank limit" checker below so it checks if it's 0, it sets to 1000. You can defaultly change the values of these variables right in the app so you don't want to put these lines of code everytime you make a command.]
+$if[$splitText[3]==0]
+$editSplitText[3;1000]
+$c[set the current bank limit value to 1000 if the value is 0. (thats the default, you can change it)]
+$setVar[VARIABLE;$joinSplitText[.];$authorID]
+$endif
+$if[$splitText[4]>=$splitText[5]]
+$c[if XP reaches or goes more than Required EXP]
+$editSplitText[6;$sum[$splitText[6];1]] $c[Increases Level by 1 each time user levels up.]
+$editSplitText[4;0] $c[EXP set to 0 once leveled up.]
+$editSplitText[5;$sum[$splitText[5];100]] $c[Required XP set to +100 while every time user levels up.]
+$setVar[VARIABLE;$joinSplitText[.];$authorID]
+$endif
+```
+
+That's it, it was this simple. If you don't want to always copy paste the "bank limit" and Level checker everytime when making a new command, you can defaultely set the values to whatever you want in the app, so you don't want to get annoyed, like this:
+
+![Click Me](https://cdn.discordapp.com/attachments/1349964745519665273/1350397269949808650/IMG_20250315_144614.jpg?ex=67d696f6&is=67d54576&hm=e468e2e318a52fbafedab398b188eec78b4cbab74fd098de0e637f361175dbfa&)
+
+
+In this image, I've set default values of Bank Limit to 1000, Required EXP to 100 and Level to 1, so I don't want to copy paste the code to manually check it.
+
+That's it, now let's focus on the final command: **Shop Command**.
+
+---
+
+Ok.
