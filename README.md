@@ -341,7 +341,7 @@ There. Since it's a pretty visual code and there's nothing to be done in it, the
 
 ### Buy Command
 
-This is a basic buy command that checks if the item exists in the shop, and if not then it returns an output message.
+This is a basic buy command that checks if the item exists in the shop, and if not then it outputs an error message.
 
 ```markdown
 $nomention
