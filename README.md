@@ -314,7 +314,7 @@ Since there are 5 fruits that are being added in the shop, 5 variables with each
 
 TO REMEMBER:
 
-**DO NOT** add the seperator at the beginning of the Variable Value (Before the first variable) and at the end of the variable (After the last variable).
+**DO NOT** add the seperator at the beginning of the Variable Value (Before the first variable) and at the end of the variable (After the last variable), unless you're planning to make empty valued variables.
 
 This is how the code looks like, with adding basic embed examples:
 
@@ -409,6 +409,7 @@ This is a basic buy command with the existing items I added in my shop command. 
 
 ---
 
+With this method, you can make over 50 variables in a single variable (55 to be exact), with each variable holding approximately **8 characters** long values.
 I guess that's it, thank you for following the whole Guide, and those who read the whole Guide until here, you're a real one. Whole Guide done by: `kitten_tenacious`
 
 If you ever face any error, please DM me or create a forum in Support then ping me. I hope you understand this Guide, because this can be a pretty save for your variables.
